@@ -1,0 +1,27 @@
+---
+abstract: 'Perl extension for blah blah blah'
+author:
+  - 'Wes Young, <wes@>'
+distribution_type: module
+generated_by: 'Module::Install version 0.76'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: CIF-WebAPI
+no_index:
+  directory:
+    - inc
+    - t
+requires:
+  Apache2::REST: 0.06
+  CIF::DBI: 0.00_2
+  Class::DBI: 3.0.17
+  Config::Simple: 4.59
+  JSON: 2.07
+  Net::DNS: 0.65
+  Text::Table: 1.114
+  perl: 5.8.8
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.00_02
