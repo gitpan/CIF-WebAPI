@@ -165,6 +165,7 @@ foreach (@feeds){
         description => lc($description),
         impact      => lc($impact),
         restriction => lc($restriction),
+        detecttime  => $dt,
     });
 
     print lc($description).': '.$id.' created -- '.$id->uuid()."\n";

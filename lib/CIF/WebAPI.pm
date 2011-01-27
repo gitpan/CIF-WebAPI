@@ -5,7 +5,7 @@ use 5.008008;
 use strict;
 use warnings;
 
-our $VERSION = '0.00_02';
+our $VERSION = '0.01_01';
 $VERSION = eval $VERSION;  # see L<perlmodstyle>
 
 use CIF::Message::Structured;
@@ -86,7 +86,8 @@ sub GET {
             return Apache2::Const::FORBIDDEN;
         }
         
-        my @recs = $qbucket->lookup($q,$apikey,$maxresults);
+        my $silent_lookup = $request->{'r'}->param('silent');
+        my @recs = $qbucket->lookup($q,$apikey,$maxresults,$silent_lookup);
         unless(@recs){ return Apache2::Const::HTTP_OK; }
         my $res;
         @recs = map { $bucket->mapIndex($_) } @recs;
